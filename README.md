@@ -7,7 +7,7 @@ By Chris Swan
 
 Description
 
-A web app using Silex & twig to create a contact list. Epicodus Day 5 code review.
+A web app using Silex & twig to create a contact list. Epicodus Week 1 code review from 8/7/15
 
 Setup
 
@@ -27,6 +27,8 @@ PHP
 Twig
 
 HTML
+
+CSS with bootstrap
 
 Legal
 

@@ -17,13 +17,13 @@
     $app->get("/", function() use ($app) {
         return $app['twig']->render('contacts.html.twig', array('contacts' => Contact::getAll()));
     });
-//this one goes to the create names twig
+
     $app->post("/contacts", function() use ($app) {
         $name = new Contact($_POST['name'], $_POST['phone'], $_POST['address']);
         $name->save();
         return $app['twig']->render('create_contact.html.twig', array('newcontact' => $name));
     });
-//This one routes to the delete tasks twig
+
     $app->post("/delete_contacts", function() use ($app) {
         Contact::deleteAll();
         return $app['twig']->render('delete_contacts.html.twig');
