@@ -8,9 +8,9 @@
 
     {% if contacts is not empty %}
         <p>Here are your contacts:</p>
-        <ul>
+          <ul>
             {% for contact in contacts %}
-                <li>{{ contact.getDescription }}</li>
+                <li>{{ contact.getContacts }}</li>
                 <ul>
                     <li>{{ number.getNumber }}</li>
                     <li>{{ address.getAddress }}</li>
@@ -27,7 +27,7 @@
         <input id='number' name='number' type='number'>
         <br>
         <label for='address'>Address</label>
-        <input id='address' name='address' type='address'><br>
+        <input id='address' name='address' type='text'><br>
         <button type='submit'>Add contact</button>
     </form>
     <form action='/delete_contacts' method='post'>

@@ -15,12 +15,9 @@
     ));
 
     $app->get("/", function() use ($app) {
-
         return $app['twig']->render('contacts.html.twig', array('contacts' => Contact::getAll()));
-
     });
-//this one goes to the create tasks twig
-// adding name, phone number and address
+//this one goes to the create names twig
     $app->post("/contacts", function() use ($app) {
         $name = new Contact($_POST['name'], $_POST['number'], $_POST['address']);
         $name->save();
