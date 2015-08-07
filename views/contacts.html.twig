@@ -1,0 +1,28 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <title>Contacts</title>
+</head>
+<body>
+    <h1>Contacts</h1>
+
+    {% if contacts is not empty %}
+        <p>Here are your contacts:</p>
+        <ul>
+            {% for contact in contacts %}
+                <li>{{ contact.getDescription }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action='/contacts' method='post'>
+        <label for='description'>Contact</label>
+        <input id='description' name='description' type='text'>
+
+        <button type='submit'>Add contact</button>
+    </form>
+    <form action='/delete_contacts' method='post'>
+        <button type='submit'>Clear</button>
+    </form>
+</body>
+</html>
