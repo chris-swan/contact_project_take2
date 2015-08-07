@@ -10,10 +10,10 @@
         <p>Here are your contacts:</p>
           <ul>
             {% for contact in contacts %}
-                <li>{{ contact.getContacts }}</li>
+                <li>{{ newcontact.getName }}</li>
                 <ul>
-                    <li>{{ number.getNumber }}</li>
-                    <li>{{ address.getAddress }}</li>
+                    <li>{{ newNumber.getNumber }}</li>
+                    <li>{{ newAddress.getAddress }}</li>
                 </ul>
             {% endfor %}
         </ul>

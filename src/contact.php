@@ -22,12 +22,12 @@ class Contact
         return $this->name;
     }
 
-    function setPhone()
+    function setNumber()
     {
         $this->phone = (string) $new_phone;
     }
 
-    function getPhone()
+    function getNumber()
     {
         return $this->duration;
     }
