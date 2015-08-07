@@ -10,10 +10,10 @@
         <p>Here are your contacts:</p>
           <ul>
             {% for contact in contacts %}
-                <li>{{ newcontact.getName }}</li>
+                <li>{{ contact.getName }}</li>
                 <ul>
-                    <li>{{ newNumber.getNumber }}</li>
-                    <li>{{ newAddress.getAddress }}</li>
+                    <li>{{ contact.getPhone }}</li>
+                    <li>{{ contact.getAddress }}</li>
                 </ul>
             {% endfor %}
         </ul>
@@ -23,8 +23,8 @@
         <label for='name'>Name</label>
         <input id='name' name='name' type='text'>
         <br>
-        <label for='number'>Phone number</label>
-        <input id='number' name='number' type='number'>
+        <label for='phone'>Phone number</label>
+        <input id='phone' name='phone' type='number'>
         <br>
         <label for='address'>Address</label>
         <input id='address' name='address' type='text'><br>
