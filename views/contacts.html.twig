@@ -11,14 +11,23 @@
         <ul>
             {% for contact in contacts %}
                 <li>{{ contact.getDescription }}</li>
+                <ul>
+                    <li>{{ number.getNumber }}</li>
+                    <li>{{ address.getAddress }}</li>
+                </ul>
             {% endfor %}
         </ul>
     {% endif %}
 
     <form action='/contacts' method='post'>
-        <label for='description'>Contact</label>
-        <input id='description' name='description' type='text'>
-
+        <label for='name'>Name</label>
+        <input id='name' name='name' type='text'>
+        <br>
+        <label for='number'>Phone number</label>
+        <input id='number' name='number' type='number'>
+        <br>
+        <label for='address'>Address</label>
+        <input id='address' name='address' type='address'><br>
         <button type='submit'>Add contact</button>
     </form>
     <form action='/delete_contacts' method='post'>

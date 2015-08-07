@@ -1,21 +1,45 @@
 <?php
 class Contact
 {
-    private $description;
+    private $name;
+    private $phone;
+    private $address;
 
-    function __construct($description)
+    function __construct($name, $phone, $address)
     {
-        $this->description = $description;
+        $this->name = $name;
+        $this->phone = $phone;
+        $this->address = $address;
     }
 
-    function setDescription($new_description)
+    function setName($new_name)
     {
-        $this->description = (string) $new_description;
+        $this->name = (string) $new_name;
     }
 
-    function getDescription()
+    function getName()
     {
-        return $this->description;
+        return $this->name;
+    }
+
+    function setPhone()
+    {
+        $this->phone = (string) $new_phone;
+    }
+
+    function getPhone()
+    {
+        return $this->duration;
+    }
+
+    function setAddress()
+    {
+        $this->Address = (string) $new_address;
+    }
+
+    function getAddress()
+    {
+      return $this->address;
     }
 
     function save()

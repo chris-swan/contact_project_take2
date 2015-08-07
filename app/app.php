@@ -20,10 +20,11 @@
 
     });
 //this one goes to the create tasks twig
+// adding name, phone number and address
     $app->post("/contacts", function() use ($app) {
-        $task = new Contact($_POST['description']);
-        $task->save();
-        return $app['twig']->render('create_contact.html.twig', array('newcontact' => $task));
+        $name = new Contact($_POST['name'], $_POST['number'], $_POST['address']);
+        $name->save();
+        return $app['twig']->render('create_contact.html.twig', array('newcontact' => $name));
     });
 //This one routes to the delete tasks twig
     $app->post("/delete_contacts", function() use ($app) {
